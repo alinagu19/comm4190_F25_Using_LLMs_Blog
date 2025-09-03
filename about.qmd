@@ -5,4 +5,5 @@ about:
   template: jolla
 ---
 
-About this blog
+Not really sure what this blog is about yet
+
