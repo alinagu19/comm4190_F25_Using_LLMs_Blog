@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alina">
+<meta name="dcterms.date" content="2025-09-03">
+<meta name="description" content="Sometimes I don’t understand figures in science papers, what are AI explanations?">
 
-<title>My Explorations with LLMs – My Blog</title>
+<title>AI Analyzing and Explaining Scientific Figures – My Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cfc1ed198c0656ac2354c5573c5dd1ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cfc1ed198c0656ac2354c5573c5dd1ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Blog</span>
     </a>
   </div>
@@ -150,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,140 +116,127 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">AI Analyzing and Explaining Scientific Figures</h1>
+                  <div>
+        <div class="description">
+          Sometimes I don’t understand figures in science papers, what are AI explanations?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Learning</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alina </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 3, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGVhcm5pbmc=">Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="chat-gpt-analysis-of-figures" class="level1">
+<h1>Chat-GPT Analysis of Figures</h1>
+<p><img src="science.jpg" class="img-fluid"></p>
+<section id="scientific-figures-in-papers-can-sometimes-be-quite-difficult-to-understand" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-figures-in-papers-can-sometimes-be-quite-difficult-to-understand">Scientific figures in papers can sometimes be quite difficult to understand</h2>
+<p>As a part of my major (Biochemistry) class, we have to do a weekly discussion post summarizing a scientific article of our choice related. However, we all do research in different topics and it can be challenging to interpret figures and results, especially when I am not familiar with the techniques or molecules (proteins, genes, inhibitors, etc.) being used/mentioned.</p>
+</section>
+<section id="asking-chat-gpt-to-analyze-the-figure" class="level2">
+<h2 class="anchored" data-anchor-id="asking-chat-gpt-to-analyze-the-figure">Asking Chat-GPT to analyze the figure</h2>
+<p><img src="figure.png" class="img-fluid"></p>
+<section id="without-a-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="without-a-prompt">Without a prompt</h3>
+<p>Got it — this is an EMSA (Electrophoretic Mobility Shift Assay) figure (Fig. 4B). Let’s break it down step by step:</p>
+<p>🔎 What’s in the figure?</p>
+<p>Lane setup (grid above the gel):</p>
+<p>Probe = DNA probe (labeled).</p>
+<p>Nuc. Extract = nuclear extract (contains transcription factors).</p>
+<p>IFN-γ = cytokine used to stimulate STAT1 signaling.</p>
+<p>Ruxolitinib = JAK inhibitor (at 50 nM, 250 nM, 500 nM).</p>
+<p>IgG = nonspecific antibody control.</p>
+<p>Anti-pSTAT1 = supershift antibody to confirm STAT1 binding.</p>
+<p>Gel bands (bottom image):</p>
+<p>Shows DNA-protein complexes.</p>
+<p>Red circles highlight the shifted bands (pSTAT1 bound to DNA probe).</p>
+<p>When anti-pSTAT1 antibody is added, the complex is shifted even higher → confirming specificity of STAT1-DNA binding.</p>
+<p>Ruxolitinib treatment reduces the band intensity, showing inhibition of STAT1 activation.</p>
+<p>🧾 Interpretation</p>
+<p>Without IFN-γ: no strong STAT1 binding.</p>
+<p>With IFN-γ: a clear shifted band (activated STAT1 binding DNA).</p>
+<p>With increasing Ruxolitinib: reduced band intensity (dose-dependent inhibition of STAT1).</p>
+<p>With Anti-pSTAT1 antibody: supershifted band → proves that STAT1 is indeed binding to the probe.</p>
+<p>IgG control: no shift, confirming specificity.</p>
+<p>📌 In summary</p>
+<p>This figure shows that IFN-γ activates STAT1 binding to DNA, and Ruxolitinib dose-dependently blocks this binding. The supershift with anti-pSTAT1 antibody confirms that the DNA-binding protein is phosphorylated STAT1.</p>
+</section>
+<section id="with-the-prompt-analyze-this-figure" class="level3">
+<h3 class="anchored" data-anchor-id="with-the-prompt-analyze-this-figure">With the prompt: Analyze this figure</h3>
+<p>Perfect — let’s do a detailed analysis of this Fig. 4B EMSA:</p>
+<ol type="1">
+<li>What the experiment tests</li>
+</ol>
+<p>This is an Electrophoretic Mobility Shift Assay (EMSA) using nuclear extracts from CCD841 cells.</p>
+<p>The goal is to see whether STAT1 (activated by IFN-γ) binds to a DNA probe and whether this is affected by the JAK inhibitor Ruxolitinib.</p>
+<p>Antibodies (IgG or anti-pSTAT1) are included to test specificity of the protein–DNA interaction.</p>
+<ol start="2" type="1">
+<li>Lane breakdown (based on the grid above the gel)</li>
+</ol>
+<p>Probe only: no band shift → probe runs at baseline.</p>
+<p>Probe + Nuclear extract: weak/absent shift unless IFN-γ is present.</p>
+<ul>
+<li><p>IFN-γ: strong shifted band appears → consistent with STAT1 activation.</p></li>
+<li><p>Ruxolitinib (50, 250, 500 nM): progressive loss of the shifted band, showing dose-dependent inhibition of STAT1 DNA binding.</p></li>
+<li><p>IgG: no change (control for nonspecific antibody).</p></li>
+<li><p>Anti-pSTAT1: band supershifts upward → confirms that phosphorylated STAT1 is the DNA-binding protein.</p></li>
+</ul>
+<ol start="3" type="1">
+<li>What the bands mean</li>
+</ol>
+<p>The red circles highlight the DNA–protein complexes (STAT1 bound to probe).</p>
+<p>When Ruxolitinib concentration increases, the band intensity decreases → JAK–STAT signaling is inhibited.</p>
+<p>The supershift with anti-pSTAT1 is the definitive proof that the protein binding the probe is STAT1.</p>
+<ol start="4" type="1">
+<li>Overall interpretation</li>
+</ol>
+<p>This figure demonstrates that:</p>
+<p>IFN-γ activates STAT1 binding to DNA in CCD841 cells.</p>
+<p>Ruxolitinib inhibits this activation in a dose-dependent manner.</p>
+<p>The binding is specific to phosphorylated STAT1, confirmed by the supershift with anti-pSTAT1 antibody.</p>
 
 
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ0xlYXJuaW5n" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757368121892" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="481">
-<div class="thumbnail"><a href="./posts/002_Analyzing_Scientific_Figures/FigureAnalysis.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_Analyzing_Scientific_Figures/science.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_Analyzing_Scientific_Figures/FigureAnalysis.html" class="no-external">AI Analyzing and Explaining Scientific Figures</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_Analyzing_Scientific_Figures/FigureAnalysis.html" class="no-external">
-<p>Sometimes I don’t understand figures in science papers, what are AI explanations?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_Analyzing_Scientific_Figures/FigureAnalysis.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Alina
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0xlYXJuaW5n" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757368121892" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail"><a href="./posts/001_testing/001testing.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_testing/001testing.html" class="no-external">Alina’s Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_testing/001testing.html" class="no-external">
-<p>Testing Blogging</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_testing/001testing.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Alina
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1757368121892" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
