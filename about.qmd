@@ -1,10 +1,10 @@
 ---
 title: About
-image: profile.jpg
+image: profilephoto.png
 about:
   template: jolla
 ---
 
-Hi! My name is Alina and I am a student in COMM 4190 - Talking with AI: Computational and Communication Approaches! This blog is about my explorations using LLM's :)
+Hi! My name is Alina and I am a student in COMM 4190 - Talking with AI: Computational and Communication Approaches! This blog is about my explorations using LLM's :) I'm a senior studying Biochemistry and minoring in Data Science & Analytics!
 
 
