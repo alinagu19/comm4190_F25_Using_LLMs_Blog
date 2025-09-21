@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7b63c25c14df0a3a64dc3ec8b366e2a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ca6ef412952242cddf6c3fdbe739bbca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,11 +162,20 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Task:</strong> I am going to ask ChatGPT5 to begin a Wordle by giving me a 5 letter word. I am not going to tell the LLM that I will be inputting it into Wordle, so it doesn’t give me an “optimal” word. Then I will describe (in words) the result and ask ChatGPT5 to give me another word as the next prompt. I will continue until the LLM fails or succeeds. Let’s go!</p>
 <p><img src="wordle.png" class="img-fluid"></p>
 <p>First 5-letter word choice: <strong>crisp</strong></p>
-<p><strong>Reprompt:</strong> &gt; the letter c is in the correct place, every other letter is not present in the word. try again with another 5 letter word.</p>
+<p><strong>Reprompt:</strong></p>
+<blockquote class="blockquote">
+<p>the letter c is in the correct place, every other letter is not present in the word. try again with another 5 letter word.</p>
+</blockquote>
 <p>Next guess: <strong>cloak</strong></p>
-<p><strong>Reprompt:</strong> &gt; the c is still correct. the o is in the word but doesn’t appear at that location. every other letter is not in the word. try again</p>
+<p><strong>Reprompt:</strong></p>
+<blockquote class="blockquote">
+<p>the c is still correct. the o is in the word but doesn’t appear at that location. every other letter is not in the word. try again</p>
+</blockquote>
 <p>Next guess: <strong>count</strong></p>
-<p><strong>Reprompt:</strong> &gt; c and o are in the right place. n appears in the word but not that location. every other letter is not present. try again</p>
+<p><strong>Reprompt:</strong></p>
+<blockquote class="blockquote">
+<p>c and o are in the right place. n appears in the word but not that location. every other letter is not present. try again</p>
+</blockquote>
 <p>Next guess: <strong>coven</strong></p>
 <section id="correct" class="level4">
 <h4 class="anchored" data-anchor-id="correct">Correct!!</h4>
