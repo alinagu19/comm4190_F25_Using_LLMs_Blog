@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alina">
-<meta name="dcterms.date" content="2025-09-03">
-<meta name="description" content="Sometimes I don’t understand figures in science papers, what are AI explanations?">
+<meta name="dcterms.date" content="2025-09-27">
+<meta name="description" content="How good is this LLM at a ‘fill-in-the-blank’ word puzzle?">
 
-<title>AI Analyzing and Explaining Scientific Figures – Alina’s Blog</title>
+<title>Can Chat-GPT5 Help Me Solve Bracket City? – Alina’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,16 +110,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AI Analyzing and Explaining Scientific Figures</h1>
+      <h1 class="title">Can Chat-GPT5 Help Me Solve Bracket City?</h1>
                   <div>
         <div class="description">
-          Sometimes I don’t understand figures in science papers, what are AI explanations?
+          How good is this LLM at a ‘fill-in-the-blank’ word puzzle?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Science</div>
-                <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">Bracket City</div>
+                <div class="quarto-category">Puzzle</div>
+                <div class="quarto-category">The Atlantic</div>
               </div>
                   </div>
   </div>
@@ -137,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 3, 2025</p>
+        <p class="date">September 27, 2025</p>
       </div>
     </div>
     
@@ -156,83 +157,73 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="chat-gpt-analysis-of-figures" class="level1">
-<h1>Chat-GPT Analysis of Figures</h1>
-<p><img src="science.jpg" class="img-fluid"></p>
-<section id="scientific-figures-in-papers-can-sometimes-be-quite-difficult-to-understand" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-figures-in-papers-can-sometimes-be-quite-difficult-to-understand">Scientific figures in papers can sometimes be quite difficult to understand</h2>
-<p>As a part of my major (Biochemistry) class, we have to do a weekly discussion post summarizing a scientific article of our choice related. However, we all do research in different topics and it can be challenging to interpret figures and results, especially when I am not familiar with the techniques or molecules (proteins, genes, inhibitors, etc.) being used/mentioned.</p>
+<section id="ive-tested-chat-gpt-on-other-word-puzzles-how-does-it-do-on-this-less-well-known-clue-based-word-game" class="level3">
+<h3 class="anchored" data-anchor-id="ive-tested-chat-gpt-on-other-word-puzzles-how-does-it-do-on-this-less-well-known-clue-based-word-game">I’ve tested Chat-GPT on other word puzzles, how does it do on this less well known clue-based word game?</h3>
+<section id="what-is-the-game" class="level5">
+<h5 class="anchored" data-anchor-id="what-is-the-game">What is the game?</h5>
+<p><strong>Bracket City</strong> is a nested clue word puzzle game made by <em>The Atlantic</em>. You start with short phrases that act as clues to a word. Then that word helps you make sense of ‘outer’ phrases, which then hint at other clues. Essentially, you work your way out (hence the ‘nested’ part) until you solve the whole puzzle. Shout out Came</p>
+<p><img src="brack.png" class="img-fluid"></p>
 </section>
-<section id="asking-chat-gpt5-to-analyze-the-figure" class="level2">
-<h2 class="anchored" data-anchor-id="asking-chat-gpt5-to-analyze-the-figure">Asking Chat-GPT5 to analyze the figure</h2>
-<p><img src="figure.png" class="img-fluid"></p>
-<section id="without-a-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="without-a-prompt">Without a prompt</h3>
-<p>Got it — this is an EMSA (Electrophoretic Mobility Shift Assay) figure (Fig. 4B). Let’s break it down step by step:</p>
-<p>🔎 What’s in the figure?</p>
-<p>Lane setup (grid above the gel):</p>
-<p>Probe = DNA probe (labeled).</p>
-<p>Nuc. Extract = nuclear extract (contains transcription factors).</p>
-<p>IFN-γ = cytokine used to stimulate STAT1 signaling.</p>
-<p>Ruxolitinib = JAK inhibitor (at 50 nM, 250 nM, 500 nM).</p>
-<p>IgG = nonspecific antibody control.</p>
-<p>Anti-pSTAT1 = supershift antibody to confirm STAT1 binding.</p>
-<p>Gel bands (bottom image):</p>
-<p>Shows DNA-protein complexes.</p>
-<p>Red circles highlight the shifted bands (pSTAT1 bound to DNA probe).</p>
-<p>When anti-pSTAT1 antibody is added, the complex is shifted even higher → confirming specificity of STAT1-DNA binding.</p>
-<p>Ruxolitinib treatment reduces the band intensity, showing inhibition of STAT1 activation.</p>
-<p>🧾 Interpretation</p>
-<p>Without IFN-γ: no strong STAT1 binding.</p>
-<p>With IFN-γ: a clear shifted band (activated STAT1 binding DNA).</p>
-<p>With increasing Ruxolitinib: reduced band intensity (dose-dependent inhibition of STAT1).</p>
-<p>With Anti-pSTAT1 antibody: supershifted band → proves that STAT1 is indeed binding to the probe.</p>
-<p>IgG control: no shift, confirming specificity.</p>
-<p>📌 In summary</p>
-<p>This figure shows that IFN-γ activates STAT1 binding to DNA, and Ruxolitinib dose-dependently blocks this binding. The supershift with anti-pSTAT1 antibody confirms that the DNA-binding protein is phosphorylated STAT1.</p>
+<section id="my-current-game---i-need-help" class="level4">
+<h4 class="anchored" data-anchor-id="my-current-game---i-need-help">My Current Game - I need help 😭</h4>
+<p><img src="game.png" class="img-fluid"></p>
 </section>
-<section id="with-the-prompt-analyze-this-figure" class="level3">
-<h3 class="anchored" data-anchor-id="with-the-prompt-analyze-this-figure">With the prompt: Analyze this figure</h3>
-<p>Perfect — let’s do a detailed analysis of this Fig. 4B EMSA:</p>
-<ol type="1">
-<li>What the experiment tests</li>
-</ol>
-<p>This is an Electrophoretic Mobility Shift Assay (EMSA) using nuclear extracts from CCD841 cells.</p>
-<p>The goal is to see whether STAT1 (activated by IFN-γ) binds to a DNA probe and whether this is affected by the JAK inhibitor Ruxolitinib.</p>
-<p>Antibodies (IgG or anti-pSTAT1) are included to test specificity of the protein–DNA interaction.</p>
-<ol start="2" type="1">
-<li>Lane breakdown (based on the grid above the gel)</li>
-</ol>
-<p>Probe only: no band shift → probe runs at baseline.</p>
-<p>Probe + Nuclear extract: weak/absent shift unless IFN-γ is present.</p>
+<section id="can-chat-gpt5-help" class="level4">
+<h4 class="anchored" data-anchor-id="can-chat-gpt5-help">Can Chat-GPT5 Help?</h4>
+<p>First, I am going to ask Chat-GPT about one of the simpler clues. I first informed the LLM of what game I was playing. Then, as the prompt, I just typed in:</p>
+<blockquote class="blockquote">
+<p>age of certain tale-telling wives.</p>
+</blockquote>
+<p><strong>Response</strong>:</p>
+<blockquote class="blockquote">
+<p>Step 1. Identify the reference:</p>
+<p>“tale-telling wives” → almost certainly refers to The Wife of Bath from The Canterbury Tales by Geoffrey Chaucer. She is one of the most famous “tale-telling wives.”</p>
+<p>Step 2. Look for the wordplay:</p>
+<p>Crossword-style clues usually have:</p>
+<p>A definition (here: “age”), and a wordplay part (here: “of certain tale-telling wives”). The “wives” bit suggests plural. The “age” might be something like “ERA.”</p>
+<p>Step 3. Put it together</p>
+<p>“Age” = ERA</p>
+<p>“Certain tale-telling wives” = wives from The Canterbury Tales → “WIFE OF BATH” (but plural doesn’t quite fit).</p>
+<p>But in wordplay terms:</p>
+<p>“Bath” is a city.</p>
+<p>“Age” can clue ERA.</p>
+<p>So “tale-telling wives” (Wife of Bath → Bath → ERA) → answer is ERA.</p>
+<p>✅ So the answer is likely ERA = “age.” The clue works because “tale-telling wives” hints at the Wife of Bath, whose home is Bath → “BATH” → “AGE” = “ERA.”</p>
+</blockquote>
+<p>So that’s not right 😞 nor does it really make sense…</p>
+<p>After thinking some more, I got the right answer. <strong>old</strong></p>
+</section>
+<section id="after-a-few-more-clues-solved-i-got-stuck-here" class="level4">
+<h4 class="anchored" data-anchor-id="after-a-few-more-clues-solved-i-got-stuck-here">After a few more clues solved, I got stuck here:</h4>
+<p><img src="game2.png" class="img-fluid"></p>
+<p>Chat-GPT prompt:</p>
+<blockquote class="blockquote">
+<p>embodiment of the establishment</p>
+</blockquote>
+<p><strong>Response:</strong></p>
+<blockquote class="blockquote">
+<p>Nice clue — here are the best short answers and why they fit:</p>
 <ul>
-<li><p>IFN-γ: strong shifted band appears → consistent with STAT1 activation.</p></li>
-<li><p>Ruxolitinib (50, 250, 500 nM): progressive loss of the shifted band, showing dose-dependent inhibition of STAT1 DNA binding.</p></li>
-<li><p>IgG: no change (control for nonspecific antibody).</p></li>
-<li><p>Anti-pSTAT1: band supershifts upward → confirms that phosphorylated STAT1 is the DNA-binding protein.</p></li>
+<li><p>status quo — (my top pick) literally means the existing state of affairs; calling someone the “embodiment of the establishment” often points to a person or thing that represents the status quo.</p></li>
+<li><p>establishment — a more literal, single-word option: the institution or ruling class itself; can be used figuratively to mean an embodiment.</p></li>
+<li><p>pillar of society — a common phrase for a respected person who embodies establishment values.</p></li>
+<li><p>establishmentarian — a rarer, longer noun meaning someone who supports the establishment (works as a direct “embodiment” answer if length isn’t constrained).</p></li>
 </ul>
-<ol start="3" type="1">
-<li>What the bands mean</li>
-</ol>
-<p>The red circles highlight the DNA–protein complexes (STAT1 bound to probe).</p>
-<p>When Ruxolitinib concentration increases, the band intensity decreases → JAK–STAT signaling is inhibited.</p>
-<p>The supershift with anti-pSTAT1 is the definitive proof that the protein binding the probe is STAT1.</p>
-<ol start="4" type="1">
-<li>Overall interpretation</li>
-</ol>
-<p>This figure demonstrates that:</p>
-<p>IFN-γ activates STAT1 binding to DNA in CCD841 cells.</p>
-<p>Ruxolitinib inhibits this activation in a dose-dependent manner.</p>
-<p>The binding is specific to phosphorylated STAT1, confirmed by the supershift with anti-pSTAT1 antibody.</p>
+</blockquote>
+<p>Again, these answers don’t really make sense…</p>
 </section>
-<section id="my-comments" class="level3">
-<h3 class="anchored" data-anchor-id="my-comments">My Comments</h3>
-<p>Something that immediately stands out is that without the prompt. Chat-GPT starts with a very general description of the figure, outlining each individual part and clarifying the experimental groups. Both versions give descriptions of the bands; however, the one with the prompt is much more detailed and it explains the logic more clearly. Both give fairly sound interpretations, but the answer given from the prompt contextualizes the results moreso than the answer without the prompt.</p>
-<p>Chat-GPT is surprisingly able to extract a lot of data and reasoning within scientific figures. I personally find interpreting blot data, especially ones with so many experimental condiitons, quite challenging because most of the time, they are different forms of controls. But, Chat-GPT is a really good tool to help understand them.</p>
+<section id="i-ended-up-using-two-hints-but-i-solved-it-not-with-the-help-of-chat-gpt-though" class="level4">
+<h4 class="anchored" data-anchor-id="i-ended-up-using-two-hints-but-i-solved-it-not-with-the-help-of-chat-gpt-though">I ended up using two hints, but I solved it! (not with the help of Chat-GPT though 😕)</h4>
+<p><img src="result.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="my-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="my-verdict">My Verdict</h2>
+<p>Chat-GPT5 is … (drum-roll please) terrible at Bracket City!</p>
+<p>After inputting two clues into the LLM, it unfortunately was not able to get either one. For the first clue about tale-telling wives, Chat-GPT5 dissected the clue a bit too far in my opinion, taking into account hyper-specific references that weren’t at all related to the eventual answer. Additionally, for the second clue, it also did not give good options. I wanted to point out one of the bullet points being a word that was literally in clue, meaning that it couldn’t be the answer.</p>
+<p>I think in general, Chat-GPT5 gives Bracket City answers that are incredibly overcomplicated. Perhaps it overanalyzes the clues, overlooking the general simplicity and accessibility of the game.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
