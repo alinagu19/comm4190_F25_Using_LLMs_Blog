@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alina">
-<meta name="dcterms.date" content="2025-09-15">
-<meta name="description" content="For Part 1, I am going to see if an LLM can give an accurate description of myself after I give it my MBTI">
+<meta name="dcterms.date" content="2025-10-06">
+<meta name="description" content="How good are LLMs at categorical games? Can it solve Connections?">
 
-<title>Testing LLMs on Personality Part 1: Can it provide a good description of someone given a personality type? – Alina’s Blog</title>
+<title>Can Chat-GPT5 Walk Me Through Connections? – Alina’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,16 +110,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Testing LLMs on Personality Part 1: Can it provide a good description of someone given a personality type?</h1>
+      <h1 class="title">Can Chat-GPT5 Walk Me Through Connections?</h1>
                   <div>
         <div class="description">
-          For Part 1, I am going to see if an LLM can give an accurate description of myself after I give it my MBTI
+          How good are LLMs at categorical games? Can it solve Connections?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">MBTI</div>
-                <div class="quarto-category">Personality Test</div>
+                <div class="quarto-category">Connections</div>
+                <div class="quarto-category">Puzzle</div>
+                <div class="quarto-category">NYT Games</div>
               </div>
                   </div>
   </div>
@@ -137,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 15, 2025</p>
+        <p class="date">October 6, 2025</p>
       </div>
     </div>
     
@@ -156,212 +157,195 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="part-test" class="level2">
-<h2 class="anchored" data-anchor-id="part-test">2 Part Test</h2>
-<section id="part-1.-can-one-llm-chatgpt-5-give-an-accurate-description-given-a-specific-personality-type" class="level5">
-<h5 class="anchored" data-anchor-id="part-1.-can-one-llm-chatgpt-5-give-an-accurate-description-given-a-specific-personality-type">Part 1. Can one LLM (ChatGPT 5) give an accurate description given a specific personality type?</h5>
-</section>
-<section id="part-2.-can-another-llm-microsoft-copilot-predict-the-correct-mbti-after-feeding-its-descriptions-back-to-itself" class="level5">
-<h5 class="anchored" data-anchor-id="part-2.-can-another-llm-microsoft-copilot-predict-the-correct-mbti-after-feeding-its-descriptions-back-to-itself">Part 2. Can another LLM (Microsoft Copilot) predict the correct MBTI after feeding its descriptions back to itself?</h5>
-<p><img src="snoopy_moods.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="what-is-mbti" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-mbti">What is MBTI?</h2>
-<p>MBTI stands for Myers-Briggs Type Indicator. It consists of a questionnaire to categorize people into 16 different “personality types”.</p>
-<section id="there-are-four-key-areas-of-focus" class="level3">
-<h3 class="anchored" data-anchor-id="there-are-four-key-areas-of-focus">There are four key areas of focus:</h3>
-<p><img src="mbti.png" class="img-fluid"></p>
-<p>There are 16 combinations total and those correspond to the 16 personality types, which are grouped into four larger divisions.</p>
-<section id="analysts" class="level5">
-<h5 class="anchored" data-anchor-id="analysts">Analysts</h5>
-<p>Architect, Logician, Commander, Debater</p>
-</section>
-<section id="diplomats" class="level5">
-<h5 class="anchored" data-anchor-id="diplomats">Diplomats</h5>
-<p>Advocate, Mediator, Protagonist, Campaigner</p>
-</section>
-<section id="sentinals" class="level5">
-<h5 class="anchored" data-anchor-id="sentinals">Sentinals</h5>
-<p>Logistician, Defender, Executive, Consul</p>
-</section>
-<section id="explorers" class="level5">
-<h5 class="anchored" data-anchor-id="explorers">Explorers</h5>
-<p>Virtuoso, Adventurer, Entrepreneur, Entertainer</p>
-</section>
-</section>
-</section>
-<section id="what-is-my-mbti-and-how-will-i-prompt-the-llm" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-my-mbti-and-how-will-i-prompt-the-llm">What is my MBTI and how will I prompt the LLM?</h2>
-<p>My MBTI is ISTJ, which means that I am a ’Logistician”.</p>
-<section id="chat-gpt-5-prompt" class="level4">
-<h4 class="anchored" data-anchor-id="chat-gpt-5-prompt">Chat-GPT 5 Prompt:</h4>
+<section id="ive-already-tested-chat-gpt5-on-other-puzzles-how-does-it-do-with-one-of-the-most-annoying---connections" class="level3">
+<h3 class="anchored" data-anchor-id="ive-already-tested-chat-gpt5-on-other-puzzles-how-does-it-do-with-one-of-the-most-annoying---connections">I’ve already tested Chat-GPT5 on other puzzles, how does it do with one of the most annoying - Connections?</h3>
+<p><img src="connections.png" class="img-fluid"></p>
+<p><strong>Task</strong>: I am first going to prompt the LLM that I will be giving it a list of words, and its job is to play the NYT ‘Connections’ game with that group of words. Then I will respond with a list of all 16 words and see how successful ChatGPT5 is at playing the game!</p>
+<section id="prompt" class="level4">
+<h4 class="anchored" data-anchor-id="prompt">Prompt:</h4>
 <blockquote class="blockquote">
-<p>Write a detailed description and outline traits of someone with an ISTJ MBTI.</p>
+<p>I will be giving you a list of 16 words. I want you to play the New York Times Connections game with those words.</p>
 </blockquote>
 </section>
+<section id="response" class="level4">
+<h4 class="anchored" data-anchor-id="response">Response:</h4>
+<blockquote class="blockquote">
+<p>Perfect — I’m ready! Go ahead and give me your list of 16 words, and I’ll solve it like a <em>Connections</em> puzzle.</p>
+</blockquote>
 </section>
-<section id="response" class="level2">
-<h2 class="anchored" data-anchor-id="response">Response</h2>
-<p><strong>ISTJ Personality Overview</strong></p>
+<section id="list-of-words" class="level4">
+<h4 class="anchored" data-anchor-id="list-of-words">List of Words:</h4>
 <blockquote class="blockquote">
-<p>Type Code: Introverted • Sensing • Thinking • Judging</p>
+<p>raven, pinky, chip, jet, inky, rocky, file, clyde, hardy, sue, teller, charge, indict, itchy, pitch, cher</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>Nickname: The Inspector / The Duty Fulfiller</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Core Drive: Responsibility, reliability, and upholding commitments.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Dominant Function: Introverted Sensing (Si) → relies on memory, routines, and trusted methods.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Auxiliary Function: Extraverted Thinking (Te) → focuses on efficiency, logic, and practical systems.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>ISTJs are known for being grounded, dependable, and meticulous. They often feel a strong sense of duty to follow through on promises, meet obligations, and maintain stability. They like order, clarity, and practicality in their world.</p>
-</blockquote>
-<p><strong>Key Traits of ISTJs</strong></p>
-<blockquote class="blockquote">
-<p>Dependable &amp; Responsible</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Take obligations very seriously.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Known as people who can be counted on to deliver.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Detail-Oriented &amp; Practical</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Value concrete facts over abstract theories.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Notice small inconsistencies that others may miss.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Structured &amp; Organized</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Prefer planning ahead and sticking to schedules.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Thrive when rules, traditions, or systems are clearly defined.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Reserved but Steadfast</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Introverted → private with emotions, not quick to open up.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Quietly dedicated rather than showy.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Logical &amp; Objective</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Make decisions based on facts and efficiency.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Less swayed by emotions unless they relate to their values/duty.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Traditional &amp; Loyal</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Respectful of rules, hierarchy, and established practices.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Value stability in relationships and careers.</p>
-</blockquote>
-<p><strong>Strengths</strong></p>
-<blockquote class="blockquote">
-<p>Extremely reliable and trustworthy.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Excellent memory for details and past experiences.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Strong work ethic and perseverance.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Clear sense of duty and responsibility.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Loyal to people, institutions, and commitments.</p>
-</blockquote>
-<p><strong>Challenges</strong></p>
-<blockquote class="blockquote">
-<p>Can be rigid or resistant to change.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>May come across as too serious or unexpressive.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Struggle with abstract or highly theoretical ideas.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Sometimes prioritize duty over personal needs.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Risk being overly critical (of self and others).</p>
-</blockquote>
-<p><strong>Work Style</strong></p>
-<blockquote class="blockquote">
-<p>Prefer clear expectations and step-by-step tasks.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Thrive in structured environments (law, finance, medicine, government, military, engineering, etc.).</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Excel in roles requiring accuracy, consistency, and reliability.</p>
-</blockquote>
-<p><strong>Relationships</strong></p>
-<blockquote class="blockquote">
-<p>Show love through dependability and practical actions, not always words.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Value long-term stability over spontaneity.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Loyal, steady, and protective of their commitments.</p>
-</blockquote>
-<p><strong>✨ In short: An ISTJ is the type of person who keeps the world running smoothly — grounded, diligent, and dependable, with a strong sense of tradition and order.</strong></p>
 </section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>This part is more of a validation step for the next part as well as an investigation into how well LLMs understand the nuances of different persoality types beyond what is just directly stated. in terms of validity, I do see myself in a lot of these descriptions (it is my personality type after all). The ones that especially stood out to me were ‘Challenges’, ‘Work Style’, ‘Relationships’. I think these were extremely on the nose. I think one thing in particular doesn’t necessarily fit: “Struggle with Abstract or Theoretical Ideas”, but I think for me, this is a skill that came with time. Additionally, it has been a while since I’ve gotten this result, so it is a possibility that I am no longer this “personality”</p>
+<section id="answer" class="level4">
+<h4 class="anchored" data-anchor-id="answer">Answer:</h4>
+<p>Nice — this is a fun and tricky <em>Connections</em>-style list! Let’s solve it step by step.</p>
+<p>Here are the 16 words again: <strong>raven, pinky, chip, jet, inky, rocky, file, clyde, hardy, sue, teller, charge, indict, itchy, pitch, cher</strong></p>
+<hr>
 </section>
-<section id="extra-prompt-for-fun" class="level2">
-<h2 class="anchored" data-anchor-id="extra-prompt-for-fun">Extra Prompt (for fun)</h2>
-<p><strong>Prompt:</strong> &gt; Do you think that there are only 16 personalities?</p>
-<p><strong>ChatGPT 5 Response:</strong> &gt; Not really — the idea of there being only <strong>16 personalities</strong> comes from the <strong>Myers-Briggs Type Indicator (MBTI)</strong>, which categorizes people based on four binary traits (Introvert/Extrovert, Intuitive/Sensing, Thinking/Feeling, Judging/Perceiving).</p>
-<blockquote class="blockquote">
-<p>That framework produces <strong>16 combinations</strong>, but:</p>
-</blockquote>
-<blockquote class="blockquote">
+</section>
+<section id="group-1-pac-man-ghosts" class="level3">
+<h3 class="anchored" data-anchor-id="group-1-pac-man-ghosts">🟩 Group 1: <strong>Pac-Man ghosts</strong></h3>
+<p>These are the names of the ghosts from <em>Pac-Man</em>:</p>
 <ul>
-<li><strong>Human personality is far more complex.</strong></li>
+<li><strong>Blinky</strong> (not here)</li>
+<li><strong>Pinky</strong> ✅</li>
+<li><strong>Inky</strong> ✅</li>
+<li><strong>Clyde</strong> ✅</li>
 </ul>
-</blockquote>
-<blockquote class="blockquote">
+<p><strong>Group:</strong> Pinky, Inky, Clyde, (implied Blinky) ✅ <strong>Category:</strong> <em>Pac-Man ghosts</em></p>
+<hr>
+</section>
+<section id="group-2-famous-duos-pairs-x-y" class="level3">
+<h3 class="anchored" data-anchor-id="group-2-famous-duos-pairs-x-y">🟨 Group 2: <strong>Famous duos / pairs (X &amp; Y)</strong></h3>
 <ul>
-<li>Traits exist on spectrums, not binaries.</li>
-<li>Two people of the “same type” can behave very differently depending on culture, upbringing, stress, etc.</li>
-<li>Other models (like the <strong>Big Five</strong>) treat personality as continuous dimensions (e.g., Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism), which allows for many more nuanced combinations.</li>
-<li>Neuroscience and psychology generally agree: personality is <strong>dynamic</strong>, not fixed — it shifts with age, experience, and context.</li>
+<li><strong>Laurel &amp; Hardy</strong> ✅</li>
+<li><strong>Bonnie &amp; Clyde</strong> ✅</li>
+<li><strong>Hall &amp; Oates</strong> (no)</li>
+<li><strong>Simon &amp; Garfunkel</strong> (no) Let’s see what else pairs…</li>
+<li><strong>Sonny &amp; Cher</strong> ✅</li>
+<li><strong>Penn &amp; Teller</strong> ✅</li>
 </ul>
-</blockquote>
+<p><strong>Group:</strong> Hardy, Clyde, Cher, Teller ✅ <strong>Category:</strong> <em>One half of famous duos</em></p>
+<hr>
+</section>
+<section id="group-3-words-related-to-electricity-energy" class="level3">
+<h3 class="anchored" data-anchor-id="group-3-words-related-to-electricity-energy">🟦 Group 3: <strong>Words related to electricity / energy</strong></h3>
+<ul>
+<li><strong>Charge</strong> ✅</li>
+<li><strong>Jet</strong> (as in propulsion, not exactly)</li>
+<li><strong>Indict</strong> (no) Hmm, maybe not. Let’s look again.</li>
+</ul>
+<hr>
+</section>
+<section id="group-3-words-related-to-lawlegal-terms" class="level3">
+<h3 class="anchored" data-anchor-id="group-3-words-related-to-lawlegal-terms">🟪 Group 3: <strong>Words related to law/legal terms</strong></h3>
+<ul>
+<li><strong>Sue</strong> ✅</li>
+<li><strong>Indict</strong> ✅</li>
+<li><strong>Charge</strong> ✅</li>
+<li><strong>File</strong> ✅ (as in “file a lawsuit”)</li>
+</ul>
+<p><strong>Group:</strong> Sue, Indict, Charge, File ✅ <strong>Category:</strong> <em>Legal actions</em></p>
+<hr>
+<p>That leaves: <strong>raven, jet, chip, rocky, itchy, pitch</strong></p>
+<hr>
+</section>
+<section id="group-4-nicknames-or-adjectives-ending-in--y-cartoon-character-like" class="level3">
+<h3 class="anchored" data-anchor-id="group-4-nicknames-or-adjectives-ending-in--y-cartoon-character-like">🟦 Group 4: <strong>Nicknames or adjectives ending in “-y” (cartoon / character-like)</strong></h3>
+<ul>
+<li>Rocky ✅ (Rocky &amp; Bullwinkle)</li>
+<li>Itchy ✅ (<em>Itchy &amp; Scratchy Show</em>)</li>
+<li>Chip ✅ (Chip &amp; Dale)</li>
+<li>Jet ✅ (as in <em>The Jetsons</em> family name “Jetson”? hmm) Or maybe “Raven” fits elsewhere.</li>
+</ul>
+<p>Let’s test an alternate pattern.</p>
+<hr>
+</section>
+<section id="possible-theme-nicknames-from-pop-culture-animated-shows" class="level3">
+<h3 class="anchored" data-anchor-id="possible-theme-nicknames-from-pop-culture-animated-shows">Possible theme: <strong>Nicknames from pop culture / animated shows</strong></h3>
+<ul>
+<li><strong>Rocky</strong> → <em>Rocky &amp; Bullwinkle</em></li>
+<li><strong>Itchy</strong> → <em>Itchy &amp; Scratchy</em></li>
+<li><strong>Chip</strong> → <em>Chip &amp; Dale</em></li>
+<li><strong>Jet</strong> → <em>The Jetsons</em> (Jetson family)</li>
+</ul>
+<p>✅ <strong>Category:</strong> <em>Cartoon / animated show characters</em></p>
+<hr>
+<p>✅ <strong>Final Groups:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 56%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Color</th>
+<th>Words</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🟩</td>
+<td>Pinky, Inky, Clyde, Blinky (missing but implied)</td>
+<td>Pac-Man ghosts</td>
+</tr>
+<tr class="even">
+<td>🟨</td>
+<td>Hardy, Clyde, Cher, Teller</td>
+<td>Famous duos (one half of a pair)</td>
+</tr>
+<tr class="odd">
+<td>🟪</td>
+<td>Sue, Indict, Charge, File</td>
+<td>Legal actions</td>
+</tr>
+<tr class="even">
+<td>🟦</td>
+<td>Rocky, Itchy, Chip, Jet</td>
+<td>Cartoon characters</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Would you like me to <em>rank</em> the groups from easiest to hardest like the NYT game does?</p>
+</section>
+<section id="something-already-seems-off" class="level3">
+<h3 class="anchored" data-anchor-id="something-already-seems-off">Something already seems off…</h3>
+<p>If you look closely at the Green and Yellow colors, the Green group only has 3 words (Blinky isn’t a part of the word list) and the Yellow group reuses a word from the Green group (Clyde).</p>
+<p>Also, “raven” never gets used.</p>
+<p><em>Nevertheless, let’s try the Yellow group!</em></p>
+<section id="yellow-group-hardy-clyde-cher-and-teller-works" class="level5">
+<h5 class="anchored" data-anchor-id="yellow-group-hardy-clyde-cher-and-teller-works">Yellow group (Hardy, Clyde, Cher, and Teller) works!</h5>
+<p>ChatGTP5 gussed the category as well – “Second in a famous real-life duo”</p>
+<p><em>Now let’s move onto Purple group…</em></p>
+</section>
+<section id="purple-group-sue-indict-charge-file-is-correct" class="level5">
+<h5 class="anchored" data-anchor-id="purple-group-sue-indict-charge-file-is-correct">Purple group (Sue, Indict, Charge, File) is correct!</h5>
+<p>Category is also correct!</p>
+<p><em>Let’s try Blue now</em></p>
+</section>
+<section id="blue-group-rocky-itchy-chip-jet-is-wrong-but-only-one-off" class="level5">
+<h5 class="anchored" data-anchor-id="blue-group-rocky-itchy-chip-jet-is-wrong-but-only-one-off">Blue group (Rocky, Itchy, Chip, Jet) is wrong, but only one off</h5>
+<p>I assume this is where the issue with the Green group comes in since it was missing one and “Raven” was missing from the group of words entirely.</p>
+<p>Let’s ask the LLM!</p>
+</section>
+<section id="prompt-1" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-1">Prompt:</h4>
 <blockquote class="blockquote">
-<p>👉 So while the “16 personalities” model can be a fun and sometimes useful shorthand, it’s definitely an <strong>oversimplification</strong> of human diversity.</p>
+<p>The green group is missing a word and the blue group is incorrect. The other two groups are correct.</p>
 </blockquote>
+</section>
+<section id="answer-1" class="level4">
+<h4 class="anchored" data-anchor-id="answer-1">Answer:</h4>
 <blockquote class="blockquote">
-<p>Would you like me to compare <strong>MBTI vs Big Five</strong> to show how they approach personality differently?</p>
+<p>Nice — thanks for the hint. You were right: my blue group was off and the green group I gave was incomplete. Here’s the corrected solution.</p>
+<h1 id="final-groups">Final groups</h1>
+<p><strong>Green — synonyms for “black”</strong> raven, jet, inky, pitch <em>(raven-black, jet-black, inky-black, pitch-black)</em></p>
+<p><strong>Yellow — one half of famous duos</strong> hardy, clyde, cher, teller <em>(Laurel &amp; Hardy; Bonnie &amp; Clyde; Sonny &amp; Cher; Penn &amp; Teller)</em></p>
+<p><strong>Purple — legal actions / filings</strong> file, indict, charge, sue</p>
+<p><strong>Blue — halves of famous cartoon/animated pairs</strong> pinky, chip, rocky, itchy <em>(Pinky &amp; the Brain; Chip &amp; Dale; Rocky &amp; Bullwinkle; Itchy &amp; Scratchy)</em></p>
+<p>Want me to explain any grouping in more detail or play again with a new set? 🎯</p>
 </blockquote>
-<p><strong>My Thoughts:</strong> I think it’s interesting how ChatGPT 5 was able to answer a question seemingly looking for an opinion. Additionally, I am surprised that it gave the answer “Not really”, because I was expecting it to deflect and give an answer in between two opinions, rather than leaning to one side. I am not sure how LLMs are programmed to act based on opinion-based questions, but I am intriguied that it took somewhat of a stance. I wonder how far its opinions will go?</p>
+<p>This looks like it makes more sense now, let’s try it!</p>
+<section id="new-green-group-raven-jet-inky-pitch-is-correct" class="level5">
+<h5 class="anchored" data-anchor-id="new-green-group-raven-jet-inky-pitch-is-correct">New Green group (Raven, Jet, Inky, Pitch) is correct!</h5>
+<p>Category (“Black”) is also correct!</p>
+<p><em>Blue group has to be correct now, but let’s just test it</em></p>
+</section>
+<section id="new-blue-group-pinky-chip-rocky-itchy-is-correct" class="level5">
+<h5 class="anchored" data-anchor-id="new-blue-group-pinky-chip-rocky-itchy-is-correct">New Blue group (Pinky, Chip, Rocky, Itchy) is correct!</h5>
+<p>Category is also correct!</p>
+</section>
+</section>
+</section>
+<section id="my-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="my-thoughts">My Thoughts</h3>
+<p>Although ChatGTP5 was able to solve it in the end, I was a bit disappointed that it didn’t catch its initial error with the missing words. I found it very odd that it completely added in a word that wasn’t present and completely missed a word. I think Connections sometimes has red-herring categories that only fit three of the words to purposefully throw people off. I think the LLM fell for it and inserted its own word that would’ve worked for that category. However, once I gave it a hint and pointed out the flaw, it was perfectly able to figure out the last two categories. Speaking of categories, the LLM was also able to guess those. The only thing the LLM wasn’t really able to guess was the color of the categories, which, for those who aren’t very familiar with “Connections”, denotes the difficulty of the category. Yellow is easist, Green is easy, Blue is medium, and Purple is hardest.</p>
 
 
 </section>
