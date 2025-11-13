@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-9d0d2c4fe2252cabc78cecb5d575732d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -83,8 +83,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alina’s Blog</span>
     </a>
@@ -165,18 +163,39 @@ ul.task-list li input[type="checkbox"] {
 <section id="prompts-and-output" class="level3">
 <h3 class="anchored" data-anchor-id="prompts-and-output">Prompts and Output</h3>
 <p><strong>Initial Prompt:</strong> I am going to ask you to make an oil painting of person. I will give you descriptions of how to paint the portrait. Ready?</p>
-<p>Description 1: &gt; The portrait depicts a young woman with fair skin with larger eyes and a rounder face. Her body is facing away from the painter but her head is turned so she is looking towards the painter. We can see only about three quarters of her face. She is wearing a yellow dutch jacket that covers her shoulders and we can only see her shoulders and above. She is wearing an ‘oriental’ headress that is blue around the headband and yellow elsewhere. She also has a large pearl earring dangling from her left ear. Create an original image.</p>
+<p>Description 1:</p>
+<blockquote class="blockquote">
+<p>The portrait depicts a young woman with fair skin with larger eyes and a rounder face. Her body is facing away from the painter but her head is turned so she is looking towards the painter. We can see only about three quarters of her face. She is wearing a yellow dutch jacket that covers her shoulders and we can only see her shoulders and above. She is wearing an ‘oriental’ headress that is blue around the headband and yellow elsewhere. She also has a large pearl earring dangling from her left ear. Create an original image.</p>
+</blockquote>
 <p><img src="attempt1.png" class="img-fluid"></p>
 <section id="hmm-that-may-have-worked-a-bit-too-well-especially-since-i-requested-an-original-image.-since-this-is-eerily-close-to-the-original-painting-i-am-now-going-to-see-if-chat-gpt5-can-extend-the-portrait-to-include-the-full-body." class="level4">
 <h4 class="anchored" data-anchor-id="hmm-that-may-have-worked-a-bit-too-well-especially-since-i-requested-an-original-image.-since-this-is-eerily-close-to-the-original-painting-i-am-now-going-to-see-if-chat-gpt5-can-extend-the-portrait-to-include-the-full-body.">Hmm, that may have worked a bit too well, especially since I requested an ‘original image’. Since this is eerily close to the original painting, I am now going to see if Chat-GPT5 can extend the portrait to include the full body.</h4>
-<p>Prompt 2: &gt;cool, now extend the painting to include her full body</p>
-<p>Response: &gt;Sure — before I generate it, can you describe how you’d like her <strong>pose, setting, and clothing below the shoulders</strong> to look? For example: &gt; &gt; + Is she standing or sitting? &gt; + Should the background stay dark and simple, or include a scene (like a studio, window, etc.)? &gt; + What kind of dress or continuation of the jacket should she wear? &gt; &gt; That’ll help me extend the painting in a cohesive, realistic way.</p>
-<p>Me: &gt; she should just be standing. Leave the background the way it is. Have the jacket be the same and have a blue dress underneath.</p>
+<p>Prompt 2:</p>
+<blockquote class="blockquote">
+<p>cool, now extend the painting to include her full body</p>
+</blockquote>
+<p>Response:</p>
+<blockquote class="blockquote">
+<p>Sure — before I generate it, can you describe how you’d like her <strong>pose, setting, and clothing below the shoulders</strong> to look? For example:</p>
+<ul>
+<li>Is she standing or sitting?</li>
+<li>Should the background stay dark and simple, or include a scene (like a studio, window, etc.)?</li>
+<li>What kind of dress or continuation of the jacket should she wear?</li>
+</ul>
+<p>That’ll help me extend the painting in a cohesive, realistic way.</p>
+</blockquote>
+<p>Me:</p>
+<blockquote class="blockquote">
+<p>she should just be standing. Leave the background the way it is. Have the jacket be the same and have a blue dress underneath.</p>
+</blockquote>
 <p><img src="attempt2.png" class="img-fluid"></p>
 </section>
 <section id="interestingshe-looks-much-more-childish-now.-the-proportions-of-her-arms-to-the-length-of-the-jacket-and-dress-arent-quite-right-and-something-changed-about-the-highlighting-in-her-eye-that-modified-the-direction-of-her-gaze." class="level4">
 <h4 class="anchored" data-anchor-id="interestingshe-looks-much-more-childish-now.-the-proportions-of-her-arms-to-the-length-of-the-jacket-and-dress-arent-quite-right-and-something-changed-about-the-highlighting-in-her-eye-that-modified-the-direction-of-her-gaze.">Interesting…she looks much more childish now. The proportions of her arms to the length of the jacket and dress aren’t quite right and something changed about the highlighting in her eye that modified the direction of her gaze.</h4>
-<p>Prompt 3: &gt; Make her more proportional for an adult woman and have her look at the painter.</p>
+<p>Prompt 3:</p>
+<blockquote class="blockquote">
+<p>Make her more proportional for an adult woman and have her look at the painter.</p>
+</blockquote>
 <p><img src="attempt3.png" class="img-fluid"></p>
 </section>
 <section id="the-head-to-body-proportion-may-have-actually-gotten-worse.-the-face-does-look-more-mature-but-it-is-still-modified-from-the-first-image.-the-browbone-and-cheekbones-are-more-defined-and-the-mouth-is-now-closed.-it-has-seemed-to-lose-that-innocent-gaze-that-was-present-in-the-original." class="level4">

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alina">
-<meta name="dcterms.date" content="2025-09-27">
-<meta name="description" content="How good is this LLM at a ‘fill-in-the-blank’ word puzzle?">
+<meta name="dcterms.date" content="2025-10-10">
+<meta name="description" content="How good are LLMs at pulling out song emotions and vibes?">
 
-<title>Can Chat-GPT5 Help Me Solve Bracket City? – Alina’s Blog</title>
+<title>Can LLM’s Decipher a Song? – Alina's Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,17 +108,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Can Chat-GPT5 Help Me Solve Bracket City?</h1>
+      <h1 class="title">Can LLM’s Decipher a Song?</h1>
                   <div>
         <div class="description">
-          How good is this LLM at a ‘fill-in-the-blank’ word puzzle?
+          How good are LLMs at pulling out song emotions and vibes?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Bracket City</div>
-                <div class="quarto-category">Puzzle</div>
-                <div class="quarto-category">The Atlantic</div>
+                <div class="quarto-category">Music</div>
+                <div class="quarto-category">Image Generation</div>
               </div>
                   </div>
   </div>
@@ -136,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 27, 2025</p>
+        <p class="date">October 10, 2025</p>
       </div>
     </div>
     
@@ -155,71 +154,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="ive-tested-chat-gpt-on-other-word-puzzles-how-does-it-do-on-this-less-well-known-clue-based-word-game" class="level3">
-<h3 class="anchored" data-anchor-id="ive-tested-chat-gpt-on-other-word-puzzles-how-does-it-do-on-this-less-well-known-clue-based-word-game">I’ve tested Chat-GPT on other word puzzles, how does it do on this less well known clue-based word game?</h3>
-<section id="what-is-the-game" class="level5">
-<h5 class="anchored" data-anchor-id="what-is-the-game">What is the game?</h5>
-<p><strong>Bracket City</strong> is a nested clue word puzzle game made by <em>The Atlantic</em>. You start with short phrases that act as clues to a word. Then that word helps you make sense of ‘outer’ phrases, which then hint at other clues. Essentially, you work your way out (hence the ‘nested’ part) until you solve the whole puzzle. Shout out Came</p>
-<p><img src="brack.png" class="img-fluid"></p>
-</section>
-<section id="my-current-game---i-need-help" class="level4">
-<h4 class="anchored" data-anchor-id="my-current-game---i-need-help">My Current Game - I need help 😭</h4>
-<p><img src="game.png" class="img-fluid"></p>
-</section>
-<section id="can-chat-gpt5-help" class="level4">
-<h4 class="anchored" data-anchor-id="can-chat-gpt5-help">Can Chat-GPT5 Help?</h4>
-<p>First, I am going to ask Chat-GPT about one of the simpler clues. I first informed the LLM of what game I was playing. Then, as the prompt, I just typed in:</p>
+<section id="what-does-google-gemini-think-about-hoziers---from-eden" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-google-gemini-think-about-hoziers---from-eden">What does Google Gemini think about Hozier’s - From Eden?</h3>
+<p><img src="hozier.png" class="img-fluid"></p>
+<p>In class, we took any song of our choice and analyzed it through Google Gemini (Gemini-2.5-flash). We uploaded an audio file to gcloud and prompted the LLM with this: &gt; Listen to this music. &gt; Close your eyes and focus on how it makes you feel. &gt; What images come into your head as you listen to it. &gt; What emotions do you experience. &gt; How would you describe these feelings and images to someone?</p>
+<section id="this-is-what-the-llm-inferred" class="level4">
+<h4 class="anchored" data-anchor-id="this-is-what-the-llm-inferred">This is what the LLM inferred:</h4>
 <blockquote class="blockquote">
-<p>age of certain tale-telling wives.</p>
-</blockquote>
-<p><strong>Response</strong>:</p>
-<blockquote class="blockquote">
-<p>Step 1. Identify the reference:</p>
-<p>“tale-telling wives” → almost certainly refers to The Wife of Bath from The Canterbury Tales by Geoffrey Chaucer. She is one of the most famous “tale-telling wives.”</p>
-<p>Step 2. Look for the wordplay:</p>
-<p>Crossword-style clues usually have:</p>
-<p>A definition (here: “age”), and a wordplay part (here: “of certain tale-telling wives”). The “wives” bit suggests plural. The “age” might be something like “ERA.”</p>
-<p>Step 3. Put it together</p>
-<p>“Age” = ERA</p>
-<p>“Certain tale-telling wives” = wives from The Canterbury Tales → “WIFE OF BATH” (but plural doesn’t quite fit).</p>
-<p>But in wordplay terms:</p>
-<p>“Bath” is a city.</p>
-<p>“Age” can clue ERA.</p>
-<p>So “tale-telling wives” (Wife of Bath → Bath → ERA) → answer is ERA.</p>
-<p>✅ So the answer is likely ERA = “age.” The clue works because “tale-telling wives” hints at the Wife of Bath, whose home is Bath → “BATH” → “AGE” = “ERA.”</p>
-</blockquote>
-<p>So that’s not right 😞 nor does it really make sense…</p>
-<p>After thinking some more, I got the right answer. <strong>old</strong></p>
-</section>
-<section id="after-a-few-more-clues-solved-i-got-stuck-here" class="level4">
-<h4 class="anchored" data-anchor-id="after-a-few-more-clues-solved-i-got-stuck-here">After a few more clues solved, I got stuck here:</h4>
-<p><img src="game2.png" class="img-fluid"></p>
-<p>Chat-GPT prompt:</p>
-<blockquote class="blockquote">
-<p>embodiment of the establishment</p>
-</blockquote>
-<p><strong>Response:</strong></p>
-<blockquote class="blockquote">
-<p>Nice clue — here are the best short answers and why they fit:</p>
+<p>Making LLM inference request…</p>
+<p>This music immediately creates a sense of <strong>intimacy and introspection</strong>.</p>
+<p><strong>How it makes me feel / Emotions experienced:</strong></p>
 <ul>
-<li><p>status quo — (my top pick) literally means the existing state of affairs; calling someone the “embodiment of the establishment” often points to a person or thing that represents the status quo.</p></li>
-<li><p>establishment — a more literal, single-word option: the institution or ruling class itself; can be used figuratively to mean an embodiment.</p></li>
-<li><p>pillar of society — a common phrase for a respected person who embodies establishment values.</p></li>
-<li><p>establishmentarian — a rarer, longer noun meaning someone who supports the establishment (works as a direct “embodiment” answer if length isn’t constrained).</p></li>
+<li><strong>Melancholy:</strong> There’s a gentle, underlying sadness, not despair, but a quiet pensiveness. It feels like reflecting on something beautiful but lost, or a bittersweet truth.</li>
+<li><strong>Nostalgia:</strong> A strong sense of looking back, perhaps at a past relationship or a simpler time, with a blend of fondness and regret.</li>
+<li><strong>Tenderness/Affection:</strong> Despite the melancholy, there’s a deep warmth and affection in the vocal delivery and the gentle harmonies. It feels like a loving observation of someone or something complex.</li>
+<li><strong>Vulnerability:</strong> The singer’s voice, especially with the close harmonies, conveys a sense of openness and honesty.</li>
+<li><strong>Calm/Relaxed:</strong> The moderate tempo and acoustic instrumentation provide a very calming backdrop, encouraging a relaxed state of listening.</li>
 </ul>
+<p><strong>Images that come into my head:</strong></p>
+<ul>
+<li><strong>A quiet, early morning:</strong> Sunlight filtering through curtains, steam rising from a cup of coffee.</li>
+<li><strong>A reflective drive:</strong> Long stretches of road, perhaps in autumn, with changing landscapes.</li>
+<li><strong>An old photograph:</strong> A faded picture of a loved one or a significant moment, stirring memories.</li>
+<li><strong>Rainy window panes:</strong> Watching the world outside, lost in thought.</li>
+<li><strong>Two people sitting close, but in quiet contemplation:</strong> Not necessarily speaking, just existing together in a shared, intimate space.</li>
+<li><strong>A rustic, cozy cabin:</strong> Warm wood, soft light, a crackling fire, a sense of being sheltered from the outside world while reflecting on it.</li>
+<li>The lyrics, particularly “I slithered through from Eden, just to sit outside your door,” paint a vivid picture of patient longing and a journey from a lost paradise to a hopeful, albeit somewhat distant, presence.</li>
+</ul>
+<p><strong>How I would describe these feelings and images to someone:</strong></p>
+<p>“Imagine a crisp autumn morning, sitting by a window, watching the world wake up slowly. This music feels like <strong>a gentle, thoughtful conversation with yourself about someone you deeply cherish</strong>, who might be complex or even a bit broken, but whose essence still captivates you. It’s profoundly <strong>bittersweet, laced with tender longing and a touch of wistful nostalgia</strong>. The acoustic guitars and the singer’s heartfelt voice create an incredibly intimate atmosphere, like someone is sharing their most private reflections right beside you. It evokes images of cherished memories, quiet contemplation, and the enduring nature of love despite imperfections or past hurts. It’s the perfect soundtrack for introspection, for savoring moments of quiet beauty and the bittersweet realities of life and relationships.”</p>
 </blockquote>
-<p>Again, these answers don’t really make sense…</p>
 </section>
-<section id="i-ended-up-using-two-hints-but-i-solved-it-not-with-the-help-of-chat-gpt-though" class="level4">
-<h4 class="anchored" data-anchor-id="i-ended-up-using-two-hints-but-i-solved-it-not-with-the-help-of-chat-gpt-though">I ended up using two hints, but I solved it! (not with the help of Chat-GPT though 😕)</h4>
-<p><img src="result.png" class="img-fluid"></p>
+<section id="then-we-asked-the-llm-to-generate-an-image-based-on-those-descriptions" class="level4">
+<h4 class="anchored" data-anchor-id="then-we-asked-the-llm-to-generate-an-image-based-on-those-descriptions">Then, we asked the LLM to generate an image based on those descriptions</h4>
+<p><img src="image1.png" class="img-fluid"></p>
+<p><img src="image2.png" class="img-fluid"></p>
+<p><img src="image3.png" class="img-fluid"></p>
 </section>
 </section>
-<section id="my-verdict" class="level2">
-<h2 class="anchored" data-anchor-id="my-verdict">My Verdict</h2>
-<p>Chat-GPT5 is … (drum-roll please) terrible at Bracket City!</p>
-<p>After inputting two clues into the LLM, it unfortunately was not able to get either one. For the first clue about tale-telling wives, Chat-GPT5 dissected the clue a bit too far in my opinion, taking into account hyper-specific references that weren’t at all related to the eventual answer. Additionally, for the second clue, it also did not give good options. I wanted to point out one of the bullet points being a word that was literally in clue, meaning that it couldn’t be the answer.</p>
-<p>I think in general, Chat-GPT5 gives Bracket City answers that are incredibly overcomplicated. Perhaps it overanalyzes the clues, overlooking the general simplicity and accessibility of the game.</p>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>This song makes me feel bittersweet in a way. There’s a tone of melancholy and tragedy that the lyrics portray that’s also very dramatic. I think overall Gemini did a pretty good job of coming up with emotional descriptions because it came up with really similar descriptions to that. There are certain nuances to the lyrics that feel different than the melody, which I think the LLM overlooked. It definitely has fall season and rustic vibes, but that is also reflective of the artist in general, so I’m not sure how unique that description is to the song.</p>
 
 
 </section>
