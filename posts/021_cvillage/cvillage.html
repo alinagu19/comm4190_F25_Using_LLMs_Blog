@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alina">
+<meta name="dcterms.date" content="2025-12-05">
+<meta name="description" content="Can it help me and my friend navigate the Christmas market?">
+
+<title>How Much Does Google: Gemini 2.5 Flash Know About the Philly Christmas Village? – Alina’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9d0d2c4fe2252cabc78cecb5d575732d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Alina’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How Much Does Google: Gemini 2.5 Flash Know About the Philly Christmas Village?</h1>
+                  <div>
+        <div class="description">
+          Can it help me and my friend navigate the Christmas market?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Tourism</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alina </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 5, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="how-much-does-google-gemini-2.5-flash-know-about-the-philly-christmas-village" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-does-google-gemini-2.5-flash-know-about-the-philly-christmas-village">How Much Does Google: Gemini 2.5 Flash Know About the Philly Christmas Village?</h2>
+<p><img src="village.png" class="img-fluid"></p>
+<p>There are tons of vendors and things to do at Philly’s annual Christmas Village. Since I can’t possibly try every food item and see everything, can an LLM help me narrow down what foods to eat and what vendors to check out? The only things I require are a hot chocolate and a christmas gift that I can buy someone.</p>
+<section id="prompt" class="level3">
+<h3 class="anchored" data-anchor-id="prompt">Prompt</h3>
+<blockquote class="blockquote">
+<p>I am going to Philly’s Christmas Village tonight. Two things that I require are a hot chocolate and a Christmas gift that I can buy for someone. I am also open to trying new foods and exploring vendors. Create an itinerary for me and my friend to explore the village</p>
+</blockquote>
+</section>
+<section id="response" class="level3">
+<h3 class="anchored" data-anchor-id="response">Response</h3>
+<p>Oh, how fun! Philly’s Christmas Village is magical, especially at night. Get ready for festive cheer, delicious smells, and plenty of unique finds. Here’s an itinerary designed to hit your must-haves while exploring the best of what the village offers.</p>
+<p><strong>Philly Christmas Village Itinerary: Hot Chocolate, Gifts &amp; New Foods!</strong></p>
+<p><strong>Theme:</strong> Festive Exploration &amp; Culinary Delights</p>
+<p><strong>Key Locations:</strong> Love Park, City Hall Courtyard, Dilworth Park</p>
+<hr>
+<p><strong>Pre-Arrival Tips:</strong></p>
+<ul>
+<li><strong>Dress Warmly:</strong> Layers are your friend! Hat, gloves, scarf, and warm socks are a must.</li>
+<li><strong>Cash &amp; Card:</strong> Most vendors accept cards, but some smaller ones might prefer cash. It’s good to have both.</li>
+<li><strong>Pace Yourselves:</strong> It can get crowded, so take your time and enjoy the atmosphere.</li>
+<li><strong>Souvenir Mug:</strong> Consider getting your hot chocolate or Glühwein in the official Christmas Village mug – it’s a fun souvenir!</li>
+</ul>
+<hr>
+<p><strong>The Itinerary (Approx. 2.5 - 3 hours of active exploration):</strong></p>
+<p><strong>5:30 PM - 6:30 PM: Love Park - Initial Immersion &amp; Gift Hunt Kick-off</strong></p>
+<ul>
+<li><strong>Arrival &amp; Photo Op (5:30 PM - 5:45 PM):</strong>
+<ul>
+<li>Start at Love Park. Take a classic photo with the <strong>LOVE sculpture</strong> and the <strong>magnificent Christmas tree</strong> towering over the park. The lights will be stunning!</li>
+<li><strong>First Hot Chocolate Stop:</strong> Find one of the charming stalls in Love Park offering hot chocolate. This is your warm-up drink! Enjoy the steam rising into the cold air.</li>
+</ul></li>
+<li><strong>Gift Exploration - Part 1 (5:45 PM - 6:30 PM):</strong>
+<ul>
+<li>Wander through the Love Park stalls. This area often has a good selection of smaller, unique gifts.</li>
+<li><strong>Gift Idea Focus:</strong> Look for handcrafted ornaments (glass, wooden, or painted), unique candles, small pieces of jewelry, or items with a local Philly flair. Keep an eye out for something that sparks joy for your gift recipient. <em>Don’t feel pressured to buy the main gift here, but if something catches your eye, go for it!</em></li>
+<li><strong>Vendor Exploration:</strong> Chat with a few vendors. You might discover some interesting stories behind their crafts.</li>
+</ul></li>
+</ul>
+<p><strong>6:30 PM - 6:45 PM: Transition to City Hall - The Main Hub</strong></p>
+<ul>
+<li><strong>Festive Walk:</strong> Stroll from Love Park towards City Hall. The path will be lined with lights and more vendors. Soak in the increasing buzz as you approach the main village area.</li>
+</ul>
+<p><strong>6:45 PM - 8:00 PM: City Hall Courtyard - Culinary Adventure &amp; Main Gift Hunt</strong></p>
+<ul>
+<li><strong>Culinary Adventure - Part 1 (6:45 PM - 7:15 PM):</strong>
+<ul>
+<li>This is where the serious food exploration begins! The City Hall Courtyard is packed with diverse culinary delights.</li>
+<li><strong>New Food to Try (Savory):</strong>
+<ul>
+<li><strong>Bratwurst/German Sausages:</strong> A quintessential Christmas market experience. Grab a classic bratwurst with sauerkraut and mustard.</li>
+<li><strong>Raclette:</strong> Melted cheese scraped onto potatoes and pickles. Utterly delicious and very European!</li>
+<li><strong>Potato Pancakes (Reibekuchen):</strong> Crispy, savory, often served with apple sauce or sour cream.</li>
+<li><strong>Pierogi:</strong> If you spot a pierogi vendor, give them a try!</li>
+</ul></li>
+<li><strong>Strategy:</strong> Pick 1-2 savory items to share with your friend so you can try more!</li>
+</ul></li>
+<li><strong>Gift Exploration - Part 2 (7:15 PM - 7:45 PM):</strong>
+<ul>
+<li>The City Hall area has an even wider array of gift stalls.</li>
+<li><strong>Gift Idea Focus:</strong> Look for cozy accessories like scarves, hats, or gloves; intricate wooden carvings; unique imported crafts; or perhaps something more substantial like a decorative item for the home. You’re bound to find <em>the</em> perfect gift here.</li>
+<li><strong>Explore:</strong> Don’t be afraid to duck into different wooden huts. You never know what hidden gem you’ll find!</li>
+</ul></li>
+<li><strong>Second Hot Chocolate &amp; Sweet Treat (7:45 PM - 8:00 PM):</strong>
+<ul>
+<li>Time for another hot chocolate! Seek out a different vendor than your first, perhaps one with a unique topping or flavor (peppermint, salted caramel?).</li>
+<li><strong>New Food to Try (Sweet):</strong>
+<ul>
+<li><strong>Chimney Cakes (Trdelník):</strong> A spiral of sweet dough baked over an open flame, often coated in cinnamon sugar or nuts. A must-try!</li>
+<li><strong>Waffles or Crepes:</strong> Many stalls offer these with various toppings.</li>
+<li><strong>Stroopwafels:</strong> A classic Dutch treat – thin waffles with a caramel syrup filling.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>8:00 PM - 8:30 PM: Dilworth Park - Festive Finale &amp; Carousel Ride</strong></p>
+<ul>
+<li><strong>Carousel Fun (8:00 PM - 8:15 PM):</strong>
+<ul>
+<li>Head to the carousel located in the City Hall Courtyard. Even if you don’t ride, it’s a beautiful sight to watch and a fantastic photo opportunity with City Hall lit up in the background.</li>
+</ul></li>
+<li><strong>Dilworth Park Views &amp; Optional Ice Skating (8:15 PM - 8:30 PM):</strong>
+<ul>
+<li>Stroll through Dilworth Park, adjacent to City Hall. You’ll see the <strong>Rothman Orthopaedics Ice Rink</strong> (if you’re feeling adventurous, you could extend your visit for a skate!).</li>
+<li>Enjoy the <strong>Wintergarden</strong> and the stunning views of City Hall illuminated against the night sky. This is a great spot for some final atmospheric photos.</li>
+<li><strong>Optional Warm-up:</strong> If you’re still cold, the Rothman Cabin at the rink often has additional warm drinks and snacks.</li>
+</ul></li>
+</ul>
+<p><strong>8:30 PM Onwards: Wrap-up &amp; Farewell</strong></p>
+<ul>
+<li><strong>Recap:</strong> Discuss your favorite food finds, the gift you chose, and your favorite moments from the village.</li>
+<li><strong>Future Plans:</strong> Maybe plan a return visit next year!</li>
+</ul>
+<hr>
+<p><strong>Enjoy your magical night at Philly’s Christmas Village! It’s an experience you won’t soon forget.</strong></p>
+</section>
+<section id="asking-further" class="level3">
+<h3 class="anchored" data-anchor-id="asking-further">Asking Further</h3>
+<blockquote class="blockquote">
+<p>I would prefer to only spend about 1.5 hours there. Create a more concise schedule and only give me the top rated food items and vendors.</p>
+</blockquote>
+</section>
+<section id="response-1" class="level3">
+<h3 class="anchored" data-anchor-id="response-1">Response</h3>
+<p>Okay, 1.5 hours is tight, but totally doable if we focus on the core experience! We’ll concentrate on the bustling <strong>City Hall Courtyard</strong> and its immediate surroundings, as this is where the densest concentration of top-rated food and gift vendors are.</p>
+<p>Here’s your concise, action-packed itinerary for Philly’s Christmas Village:</p>
+<hr>
+<p><strong>Philly Christmas Village: 1.5 Hour Blitz - Top Picks Edition!</strong></p>
+<p><strong>Focus:</strong> Efficiency, Warmth, Top Tastes, Perfect Gift.</p>
+<p><strong>Key Area:</strong> City Hall Courtyard &amp; Dilworth Park.</p>
+<hr>
+<p><strong>Pre-Arrival Quick Tip:</strong> Head directly to City Hall. It’s the heart of the village for what you’re looking for.</p>
+<hr>
+<p><strong>The Itinerary (Total Time: 1.5 Hours)</strong></p>
+<p><strong>0 - 15 Minutes: Arrival &amp; Immediate Warm-Up (City Hall Courtyard)</strong></p>
+<ul>
+<li><strong>Arrival:</strong> Enter the Christmas Village directly into the City Hall Courtyard. The lights and energy will hit you instantly!</li>
+<li><strong>MUST-HAVE HOT CHOCOLATE:</strong> Your first mission! Look for a prominent hot chocolate stand. Many vendors offer it, but look for one that’s bustling, often near the food court section.
+<ul>
+<li><strong>Top Vendor Tip:</strong> While specific names can vary, look for the main <strong>“German Grill”</strong> type stands; they often have great hot chocolate and are quick. Sip as you walk to warm up!</li>
+</ul></li>
+</ul>
+<p><strong>15 - 45 Minutes: The Gift Hunt &amp; Savory Delights (City Hall Courtyard)</strong></p>
+<ul>
+<li><strong>THE CHRISTMAS GIFT:</strong> This is your dedicated gift-finding window. Wander through the rows of wooden huts in the City Hall Courtyard.
+<ul>
+<li><strong>Top Gift Vendors (General Categories):</strong>
+<ul>
+<li><strong>Handcrafted Ornaments:</strong> Look for stalls with intricate glass, wooden, or painted ornaments. These are classic market gifts.</li>
+<li><strong>Unique German Imports:</strong> Keep an eye out for stalls selling traditional German wooden crafts like Nutcrackers, Räuchermänner (smokers), or delicate straw stars.</li>
+<li><strong>Cozy Knitwear:</strong> Scarves, hats, and gloves often make excellent, practical gifts, especially from vendors offering unique designs.</li>
+<li><strong>Handmade Jewelry:</strong> Many artisans sell unique, non-mass-produced pieces.</li>
+</ul></li>
+<li><em>Strategy:</em> Don’t overthink it. Look for something that genuinely feels special and unique to the market atmosphere.</li>
+</ul></li>
+<li><strong>TOP SAVORY FOOD:</strong> While browsing for gifts, keep an eye out for these highly recommended savory treats. Pick one to share with your friend!
+<ul>
+<li><strong>Bratwurst:</strong> The quintessential Christmas market food! Look for a <strong>“German Grill”</strong> or <strong>“Sausage Stand.”</strong> Get it on a bun with sauerkraut and mustard. It’s quick, authentic, and incredibly satisfying.</li>
+<li><strong>Raclette:</strong> Melted cheese scraped fresh off a wheel onto potatoes and pickles. It’s a unique and delicious experience, but might involve a slightly longer wait. Look for the distinct cheese-melting setup.</li>
+</ul></li>
+</ul>
+<p><strong>45 - 75 Minutes: Sweet Treat &amp; Festive Atmosphere (City Hall Courtyard &amp; Carousel)</strong></p>
+<ul>
+<li><strong>TOP SWEET FOOD:</strong> Time for a delightful sweet treat!
+<ul>
+<li><strong>Chimney Cakes (Trdelník):</strong> A must-try! Look for the stand where they’re baking the dough spirals over an open flame, then coating them in cinnamon sugar or nuts. They’re warm, fresh, and visually appealing.</li>
+<li><em>Alternative: Warm Stroopwafels:</em> If you need something quicker, a warm, fresh Stroopwafel (thin waffle with caramel filling) is always a winner and easy to eat on the go.</li>
+</ul></li>
+<li><strong>CAROUSEL &amp; LIGHTS:</strong> While enjoying your sweet treat, walk towards the <strong>carousel</strong> in the center of the courtyard. Even if you don’t ride, it’s a beautiful, festive sight, perfect for a quick photo with City Hall lit up in the background.</li>
+</ul>
+<p><strong>75 - 90 Minutes: Final Views &amp; Departure (Dilworth Park)</strong></p>
+<ul>
+<li><strong>DILWORTH PARK STROLL:</strong> Take a quick walk through <strong>Dilworth Park</strong>, which is right next to City Hall.
+<ul>
+<li><strong>Wintergarden &amp; Ice Rink:</strong> Admire the Rothman Orthopaedics Ice Rink and the surrounding Wintergarden. The view of City Hall from here, all lit up, is spectacular and makes for a great final photo.</li>
+<li><strong>Quick Warm-up (Optional):</strong> If you’re still feeling chilly, the Rothman Cabin by the rink often has additional hot drinks.</li>
+</ul></li>
+<li><strong>Departure:</strong> Full of festive cheer, a perfect gift, and delicious memories!</li>
+</ul>
+<hr>
+<p>Enjoy your whirlwind tour of Philly’s Christmas Village! It’ll be a super concentrated dose of holiday magic.</p>
+</section>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>In terms of creating travel itineraries, Google: Gemini actually does a pretty good job. It gives a proper amount of specificity that is very helpful. It included everything that I originally required and also was able to create a new itinerary based on my new time constraint. I was hoping for a more concise layout for the response, but that likely means I would have to refine my prompt since looking back, it was a bit vague. Something I am curious about is the wait times for the food, which it didn’t seem like the LLM took into account. I wonder if it would be possible for it to compile average wait times from online data and then incorporate that into the schedule? I’m excited to go tonight and try out Gemini’s recommendations!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/alinagu19\.github\.io\/comm4190_F25_Using_LLMs_Blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
