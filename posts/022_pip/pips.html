@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alina">
+<meta name="dcterms.date" content="2025-12-07">
+<meta name="description" content="How good are LLMs at visual games? Can it solve Pips?">
+
+<title>Can ChatGPT-5.2 Solve Pip? – Alina’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9d0d2c4fe2252cabc78cecb5d575732d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Alina’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Can ChatGPT-5.2 Solve Pip?</h1>
+                  <div>
+        <div class="description">
+          How good are LLMs at visual games? Can it solve Pips?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Puzzle</div>
+                <div class="quarto-category">NYT Games</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alina </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 7, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="ive-tested-chatgpt-on-other-new-york-times-games-but-what-about-this-new-one-pips" class="level2">
+<h2 class="anchored" data-anchor-id="ive-tested-chatgpt-on-other-new-york-times-games-but-what-about-this-new-one-pips">I’ve Tested ChatGPT On Other New York Times Games, But What About This New One: Pips!</h2>
+<p><img src="pips.png" class="img-fluid"></p>
+<p>I have a few other blog posts seeing how ChatGPT can solve the various New York Times Games. Since then, a new one has been introduced: Pips! Rather than word puzzles, this game is more of a logic, numbers, and pattern recognition challenge. It hinges on placing dominos in correct places to fulfill certain requirements. An example is the highlighted region requiring all numbers to be identical or for them to add up to be less than or greater than a certain number. For this, I am going to try to solve the hard Pip using assistance from ChatGPT-5.2. Since this game is very visual, let’s see how the LLM fares.</p>
+<section id="initial-board" class="level3">
+<h3 class="anchored" data-anchor-id="initial-board">Initial Board</h3>
+<p><img src="pips2.png" class="img-fluid"></p>
+</section>
+<section id="ive-tried-to-solve-a-bit-but-im-getting-stuckwhat-does-chatgpt-5.2-say" class="level3">
+<h3 class="anchored" data-anchor-id="ive-tried-to-solve-a-bit-but-im-getting-stuckwhat-does-chatgpt-5.2-say">I’ve tried to solve a bit, but I’m getting stuck…what does ChatGPT-5.2 say?</h3>
+<section id="prompt" class="level4">
+<h4 class="anchored" data-anchor-id="prompt">Prompt</h4>
+<p>Help me solve this Pips game</p>
+<p><img src="pips3.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="response" class="level3">
+<h3 class="anchored" data-anchor-id="response">Response</h3>
+<p>Great — since this is the <strong>New York Times Pips</strong> puzzle, I <em>can</em> help you solve it! To give you a <strong>full correct placement</strong>, I need to analyze the board and remaining pieces.</p>
+<p>Before I produce a solution, I need <strong>one detail</strong>:</p>
+</section>
+<section id="do-you-want" class="level3">
+<h3 class="anchored" data-anchor-id="do-you-want">Do you want:</h3>
+<p><strong>🅰️ A complete final placement of all remaining dominoes</strong>, <strong>OR</strong> <strong>🅱️ Step-by-step reasoning so you can learn how to solve it yourself?</strong></p>
+<p>Reply with <strong>A</strong> or <strong>B</strong>.</p>
+<p>Once I have that, I’ll give you an accurate answer based on the puzzle you uploaded!</p>
+</section>
+<section id="me" class="level3">
+<h3 class="anchored" data-anchor-id="me">Me</h3>
+<blockquote class="blockquote">
+<p>A</p>
+</blockquote>
+</section>
+<section id="response-1" class="level3">
+<h3 class="anchored" data-anchor-id="response-1">Response</h3>
+<p>Got it — <strong>full solution</strong> 👍 I’ll give you the <strong>exact placement of the remaining dominoes</strong> for this NYT <strong>Pips</strong> puzzle, using <strong>pip counts and orientation</strong>, so you can drop them straight in.</p>
+<hr>
+</section>
+</section>
+<section id="remaining-dominoes-from-your-tray" class="level2">
+<h2 class="anchored" data-anchor-id="remaining-dominoes-from-your-tray">Remaining dominoes (from your tray)</h2>
+<ul>
+<li><strong>0–0</strong></li>
+<li><strong>6–6</strong></li>
+<li><strong>3–3</strong></li>
+<li><strong>5–3</strong></li>
+<li><strong>4–2</strong></li>
+</ul>
+<hr>
+</section>
+<section id="final-placements" class="level2">
+<h2 class="anchored" data-anchor-id="final-placements">Final placements</h2>
+<section id="domino" class="level3">
+<h3 class="anchored" data-anchor-id="domino">1️⃣ <strong>6–6 domino</strong></h3>
+<ul>
+<li>Place it <strong>horizontally</strong> in the <strong>top-left empty slot</strong></li>
+<li>This satisfies the <strong><code>&gt;4</code> purple region</strong> (sum becomes well above 4)</li>
+</ul>
+<hr>
+</section>
+<section id="domino-1" class="level3">
+<h3 class="anchored" data-anchor-id="domino-1">2️⃣ <strong>3–3 domino</strong></h3>
+<ul>
+<li>Place it <strong>vertically</strong> in the <strong>rightmost vertical gap</strong></li>
+<li>This completes the <strong>pink <code>&gt;4</code> region</strong></li>
+</ul>
+<hr>
+</section>
+<section id="domino-2" class="level3">
+<h3 class="anchored" data-anchor-id="domino-2">3️⃣ <strong>5–3 domino</strong></h3>
+<ul>
+<li>Place it <strong>horizontally</strong> in the <strong>center-right empty space</strong></li>
+<li>This completes the <strong>green region with <code>=</code></strong></li>
+<li>The total equals the required value exactly</li>
+</ul>
+<hr>
+</section>
+<section id="domino-3" class="level3">
+<h3 class="anchored" data-anchor-id="domino-3">4️⃣ <strong>4–2 domino</strong></h3>
+<ul>
+<li>Place it <strong>vertically</strong> in the <strong>lower-center empty column</strong></li>
+<li>This satisfies the <strong><code>&lt;6</code> pink region</strong></li>
+</ul>
+<hr>
+</section>
+<section id="domino-4" class="level3">
+<h3 class="anchored" data-anchor-id="domino-4">5️⃣ <strong>0–0 domino</strong></h3>
+<ul>
+<li>Place it in the <strong>remaining bottom-left empty space</strong></li>
+<li>This finishes the <strong><code>=</code> purple region</strong> without changing its sum</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="result" class="level2">
+<h2 class="anchored" data-anchor-id="result">✅ Result</h2>
+<ul>
+<li>All inequality constraints satisfied</li>
+<li>All regions complete</li>
+<li>All dominoes placed correctly</li>
+</ul>
+<p>If you want, I can also:</p>
+<ul>
+<li>explain <strong>why</strong> each region forces those values, or</li>
+<li>show you the <strong>general strategy</strong> NYT Pips uses so future puzzles are easier</li>
+</ul>
+<p>Just say the word 🧩✨</p>
+</section>
+<section id="this-doesnt-seem-rightthe-llm-seems-to-have-misjudged-the-remaining-dominoes-and-the-directions-dont-make-sense." class="level2">
+<h2 class="anchored" data-anchor-id="this-doesnt-seem-rightthe-llm-seems-to-have-misjudged-the-remaining-dominoes-and-the-directions-dont-make-sense."><strong>This doesn’t seem right…the LLM seems to have misjudged the remaining dominoes and the directions don’t make sense.</strong></h2>
+<section id="prompt-1" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1">Prompt</h3>
+<blockquote class="blockquote">
+<p>This is incorrect, the remaining dominos are 6-0, 0-0, 3-5, 0-5, 4-3, and 3-0</p>
+</blockquote>
+</section>
+<section id="response-2" class="level3">
+<h3 class="anchored" data-anchor-id="response-2">Response</h3>
+<p>You’re right — thanks for catching that, and thank you for listing the <strong>correct remaining dominoes</strong>. 👍 Given how <strong>tight and constraint-driven NYT Pips</strong> is, I don’t want to guess placements and give you another wrong answer.</p>
+<p>To give you a <strong>100% correct final placement</strong>, I need <strong>just one more thing</strong> (and then I can finish it cleanly):</p>
+</section>
+<section id="please-do-one-of-these" class="level3">
+<h3 class="anchored" data-anchor-id="please-do-one-of-these">Please do ONE of these:</h3>
+<p><strong>Option 1 (best):</strong> Upload a <strong>slightly zoomed-in screenshot</strong> of the board so the <strong>empty slots and region boundaries</strong> are clearer.</p>
+<p><strong>Option 2:</strong> Number the empty slots (even roughly, like “top-left horizontal gap”, “center vertical gap under purple region”, etc.) and I’ll map each domino to a slot.</p>
+<hr>
+</section>
+<section id="why-this-is-necessary-quick-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-is-necessary-quick-explanation">Why this is necessary (quick explanation)</h3>
+<p>NYT Pips solutions depend on:</p>
+<ul>
+<li><strong>Exact cell adjacency</strong></li>
+<li>Whether a domino is <strong>horizontal vs vertical</strong></li>
+<li>Which <strong>cells belong to which inequality region</strong></li>
+</ul>
+<p>With pieces like <strong>6–0, 0–5, and 3–0</strong>, a single square shift can break a <code>&lt;</code> or <code>=</code> region, so precision matters.</p>
+<p>Once you send the clarified board, I’ll:</p>
+<ul>
+<li>Give you the <strong>exact final placement</strong></li>
+<li>No extra theory</li>
+<li>No trial-and-error</li>
+<li>Just “put this piece here, oriented this way” ✅</li>
+</ul>
+<p>You’re very close to the solution — this is one of the trickier NYT Pips layouts.</p>
+</section>
+<section id="this-is-becoming-more-tedious-to-ask-the-llm-for-help-but-i-will-try-one-more-time." class="level3">
+<h3 class="anchored" data-anchor-id="this-is-becoming-more-tedious-to-ask-the-llm-for-help-but-i-will-try-one-more-time.">This is becoming more tedious to ask the LLM for help, but I will try one more time.</h3>
+</section>
+<section id="response-3" class="level3">
+<h3 class="anchored" data-anchor-id="response-3">Response</h3>
+<p>Thank you — this screenshot is much clearer. I’ll give you a <strong>complete, concrete placement</strong> using <strong>specific empty locations + orientations</strong>, consistent with <strong>NYT Pips rules</strong> and the <strong>remaining dominoes</strong> you listed:</p>
+</section>
+<section id="remaining-dominoes" class="level3">
+<h3 class="anchored" data-anchor-id="remaining-dominoes">Remaining dominoes</h3>
+<p><strong>6–0, 0–0, 3–5, 0–5, 4–3, 3–0</strong></p>
+<hr>
+</section>
+</section>
+<section id="final-correct-placement" class="level2">
+<h2 class="anchored" data-anchor-id="final-correct-placement">Final correct placement</h2>
+<p>I’ll describe locations relative to the board as shown.</p>
+<hr>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">🔹 1. <strong>6–0</strong></h3>
+<p><strong>Location:</strong> top-left horizontal empty space (just right of the already-placed vertical 6) <strong>Orientation:</strong> <strong>horizontal</strong>, <strong>6 on the left, 0 on the right</strong></p>
+<ul>
+<li>This completes the <strong>blue “2” region</strong></li>
+<li>The 0 is required to keep the sum low enough</li>
+</ul>
+<hr>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">🔹 2. <strong>0–0</strong></h3>
+<p><strong>Location:</strong> bottom-left single vertical gap (directly below the purple <code>=</code> region) <strong>Orientation:</strong> <strong>vertical</strong></p>
+<ul>
+<li>This finishes the <strong>purple <code>=</code> region</strong> without changing its total</li>
+<li>This placement is forced — no other domino can go here safely</li>
+</ul>
+<hr>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">🔹 3. <strong>3–0</strong></h3>
+<p><strong>Location:</strong> directly below the left side of the long purple horizontal region <strong>Orientation:</strong> <strong>vertical</strong>, <strong>3 on top, 0 on bottom</strong></p>
+<ul>
+<li>Satisfies the <strong>pink <code>&lt;2</code> region</strong></li>
+<li>Any higher pip would violate it</li>
+</ul>
+<hr>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">🔹 4. <strong>3–5</strong></h3>
+<p><strong>Location:</strong> center-right horizontal gap inside the <strong>large green <code>=</code> region</strong> <strong>Orientation:</strong> <strong>horizontal</strong>, order doesn’t matter</p>
+<ul>
+<li>This sets the green region’s total correctly</li>
+<li>Other combinations overshoot</li>
+</ul>
+<hr>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">🔹 5. <strong>0–5</strong></h3>
+<p><strong>Location:</strong> vertical slot immediately above the green <code>=</code> region, inside the <strong>pink <code>&lt;6</code> region</strong> <strong>Orientation:</strong> <strong>vertical</strong>, <strong>0 on top, 5 below</strong></p>
+<ul>
+<li>Keeps the pink region under 6</li>
+<li>Forces the remaining values elsewhere</li>
+</ul>
+<hr>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">🔹 6. <strong>4–3</strong></h3>
+<p><strong>Location:</strong> far right vertical gap (next to the pink <code>&gt;4</code> marker) <strong>Orientation:</strong> <strong>vertical</strong></p>
+<ul>
+<li>Completes the <strong>pink <code>&gt;4</code> region</strong></li>
+<li>This region <em>must</em> contain a 4+ value here</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="result-1" class="level2">
+<h2 class="anchored" data-anchor-id="result-1">✅ Result</h2>
+<ul>
+<li>All regions satisfy their <code>&lt;</code>, <code>&gt;</code>, and <code>=</code> constraints</li>
+<li>All dominoes placed</li>
+<li>No overlaps or rule violations</li>
+</ul>
+<hr>
+<p>If you want next time, I can also:</p>
+<ul>
+<li>show <strong>how to deduce forced placements faster</strong>, or</li>
+<li>give a <strong>general NYT Pips solving strategy</strong> so these become much easier</li>
+</ul>
+<p>Nice job sticking with a tricky one — this was a tough layout 🧩👏</p>
+</section>
+<section id="this-still-makes-zero-sense" class="level2">
+<h2 class="anchored" data-anchor-id="this-still-makes-zero-sense"><strong>This still makes zero sense</strong></h2>
+<p>In the end, I just ended up solving it on my own to get this.</p>
+<p><img src="pips4.png" class="img-fluid"></p>
+</section>
+<section id="closing-remarks" class="level2">
+<h2 class="anchored" data-anchor-id="closing-remarks">Closing Remarks</h2>
+<p>Final verdict: ChatGPT is awful at Pips.</p>
+<p>I’m not even sure the LLM even understands how the game works even though it indicated that it did. Some of the directions from it didn’t make sense at all. For example, it told me to put a 3-5 domino into a region that was covered by an equal sign (=). Obviously, at first glance this can’t be the answer. It’s honestly more tedious to keep copy and pasting the image into the LLM than it is to try an reason through it. I eventually gave up on ChatGPT because it showed absolutely no hope and ended up getting it on my own anyway. ChatGPT may be decent at word puzzles, but with logic and image-based games, it still needs a lot of improvement.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/alinagu19\.github\.io\/comm4190_F25_Using_LLMs_Blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
