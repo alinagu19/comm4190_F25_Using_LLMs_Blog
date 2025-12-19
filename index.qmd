@@ -1,5 +1,5 @@
 ---
-title: Testing LLMs!!
+title: My Explorations with LLMs :)
 listing:
   contents: posts
   sort: date desc
